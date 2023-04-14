@@ -1,8 +1,8 @@
 {
-  "name": "vitepress-template",
+  "name": "magic-hooks-docs",
   "version": "0.0.1",
-  "description": "vitepress documentation template",
-  "repository": "git@github.com:shoppingzh/vitepress-template.git",
+  "description": "magic-hooks docs",
+  "repository": "git@github.com:shoppingzh/magic-hooks-docs.git",
   "author": "shoppingzh <xpzheng6@163.com>",
   "license": "MIT",
   "devDependencies": {

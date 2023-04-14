@@ -4,7 +4,7 @@ import { autoGenerateSidebar } from 'press-util'
 export default defineConfig({
   base: '/',
   appearance: true,
-  title: 'Vitepress Template',
+  title: 'Magic Hooks',
   lastUpdated: true,
   // 标签页logo
   head: [
@@ -23,9 +23,6 @@ export default defineConfig({
     nav: [{
       text: '🎯 快速入手',
       link: '/start.md'
-    }, {
-      text: '🎨 使用技巧',
-      link: '/skills.md'
     }],
     sidebar: autoGenerateSidebar as any,
   }
