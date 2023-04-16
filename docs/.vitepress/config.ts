@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { autoGenerateSidebar } from 'press-util'
+import { autoGenerateSidebar, getFirstDocLink } from 'press-util';
 
 export default defineConfig({
   base: '/',
@@ -23,7 +23,13 @@ export default defineConfig({
     nav: [{
       text: '🎯 快速入手',
       link: '/start.md'
+    }, {
+      text: '核心模块',
+      link: getFirstDocLink('core')
+    }, {
+      text: '图表模块',
+      link: getFirstDocLink('chart')
     }],
-    sidebar: autoGenerateSidebar as any,
+    sidebar: autoGenerateSidebar() as any,
   }
 })

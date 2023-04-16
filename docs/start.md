@@ -2,8 +2,28 @@
 
 ## 安装
 
-TODO
+:::code-group
+
+```bash [pnpm]
+pnpm i magic-hooks
+```
+
+```bash [yarn]
+yarn add magic-hooks
+```
+
+```bash [npm]
+npm i magic-hooks
+```
+:::
+
 
 ## 使用
 
-TODO
+```ts
+import { useLoad } from 'magic-hooks/lib/core'
+
+const { result, load } = useLoad(() => Promise.resolve([1, 2, 3]))
+
+load()
+```
