@@ -11,6 +11,9 @@
       <el-form-item label="配置变化">
         <el-button type="primary" @click="addSeries">随机加一个序列</el-button>
       </el-form-item>
+      <el-form-item label="暗黑模式">
+        <el-switch v-model="theme" active-value="dark" :inactive-value="null" />
+      </el-form-item>
     </el-form>
   </div>
 </template>
@@ -44,8 +47,10 @@ const option = computed<echarts.EChartsOption>(() => ({
 const {
   el,
   loading,
+  theme,
 } = useChart({
-  option
+  option,
+  theme: null,
 })
 
 function addSeries() {

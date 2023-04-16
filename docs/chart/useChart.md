@@ -1,6 +1,5 @@
 # useChart
 
-
 <Example title="useChart" class="mt-4">
   <chart-useChart />
 </Example>
@@ -10,7 +9,8 @@
 - 自动渲染/销毁图表资源
 - 配置项变化，自动重绘图表
 - 图表容器尺寸发生变化时，自动重绘图表
-- 提供加载状态
+- 加载态切换与样式调整
+- 动态切换主题
 
 ## 使用方法
 
