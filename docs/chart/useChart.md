@@ -52,6 +52,16 @@ const { el } = useChart({
 </script>
 ```
 
+## API
+
+**参数**
+
+- `options` (UseChartOptions): 配置
+
+**返回值**
+
+(UseChartReturn)
+
 ## Type Declarations
 
 ```ts
