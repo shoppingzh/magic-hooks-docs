@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="el" class="w-full bg-gray-100 rounded-lg" :style="{ height: `${height}px` }" />
+    <div ref="el" class="w-full" :style="{ height: `${height}px` }" />
     <el-form class="mt-4">
       <el-form-item label="图表高度">
         <el-input-number v-model="height" :step="50" />
@@ -22,12 +22,14 @@
 import { useChart } from 'magic-hooks/lib/chart'
 import { computed, ref } from 'vue';
 import * as echarts from 'echarts'
+import { useData } from 'vitepress';
 
 const height = ref(300)
 const provinces = ['安徽', '广东', '福建', '辽宁', '河南', '河北', '广西', '甘肃', '陕西']
 const series = ref<echarts.SeriesOption[]>([])
 
 const option = computed<echarts.EChartsOption>(() => ({
+  backgroundColor: 'transparent',
   grid: {
     top: 40,
     bottom: 40,
@@ -44,13 +46,22 @@ const option = computed<echarts.EChartsOption>(() => ({
   series: series.value
 }))
 
+const { isDark } = useData()
+
+const theme = computed({
+  get() {
+    return isDark.value ? 'dark' : 'light'
+  },
+  set(newVal) {
+    isDark.value = newVal === 'dark'
+  }
+})
 const {
   el,
   loading,
-  theme,
 } = useChart({
   option,
-  theme: null,
+  theme,
 })
 
 function addSeries() {

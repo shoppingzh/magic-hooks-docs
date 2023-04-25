@@ -6,7 +6,9 @@
 import { useChart } from 'magic-hooks/lib/chart';
 import { computed } from 'vue';
 import * as echarts from 'echarts'
+import { useData } from 'vitepress';
 
+const { isDark } = useData()
 const data = [
   { province: '安徽', count: 300 },
   { province: '广东', count: 165 },
@@ -16,6 +18,7 @@ const data = [
   { province: '内蒙古', count: 189 },
 ]
 const option = computed<echarts.EChartsOption>(() => ({
+  backgroundColor: 'transparent',
   xAxis: {
     type: 'category',
     data: data.map(o => o.province)
@@ -28,6 +31,7 @@ const option = computed<echarts.EChartsOption>(() => ({
   }
 }))
 const { el } = useChart({
-  option
+  option,
+  theme: computed(() => isDark.value ? 'dark' : null)
 })
 </script>
