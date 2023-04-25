@@ -77,5 +77,7 @@ function addSeries() {
 }
 
 addSeries()
+addSeries()
+addSeries()
 
 </script>
