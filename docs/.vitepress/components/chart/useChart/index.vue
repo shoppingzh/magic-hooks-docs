@@ -76,8 +76,6 @@ function addSeries() {
   }, 1000)
 }
 
-addSeries()
-addSeries()
-addSeries()
+new Array(3).fill(null).forEach(addSeries)
 
 </script>
