@@ -9,11 +9,12 @@
       </el-form-item>
     </el-form>
   </div>
-  <el-table v-loading="loading" :data="result || []" max-height="500px">
+  <el-table v-loading="loading" :data="result" max-height="500px">
     <el-table-column prop="userId" label="用户ID" align="center" width="100px"></el-table-column>
     <el-table-column prop="title" label="标题"></el-table-column>
     <el-table-column prop="body" label="内容"></el-table-column>
   </el-table>
+  <div class="mt-4 text-gray-500 text-xs text-right">总数：{{ result.length }}</div>
 </template>
 
 <script setup lang="ts">
@@ -27,12 +28,10 @@ const { result, query, loading, load } = useLoad(async() => {
 }, {
   initialQuery: {
     userId: null,
-  }
+  },
+  initialResult: [],
 })
 
 load()
-
-console.log(result);
-
 
 </script>

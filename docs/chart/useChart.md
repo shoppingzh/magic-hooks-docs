@@ -1,6 +1,6 @@
 # useChart
 
-<Example title="useChart" class="mt-4">
+<Example title="useChart">
   <chart-useChart />
 </Example>
 
@@ -14,7 +14,9 @@
 
 ## 使用方法
 
-<chart-useChart-2 />
+<Example>
+  <chart-useChart-2 />
+</Example>
 
 ```vue
 <template>
@@ -80,3 +82,11 @@ export interface UseChartReturn {
 }
 
 ```
+
+## 经典场景复现
+
+### 延迟的DOM
+
+<Example>
+  <chart-useChart-3 />
+</Example>

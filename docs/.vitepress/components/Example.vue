@@ -1,5 +1,5 @@
 <template>
-  <div class="relative p-4 pt-10 border border-gray-200 shadow-xl rounded-md overflow-hidden
+  <div class="mt-4 relative p-4 pt-10 border border-gray-200 shadow-xl rounded-md overflow-hidden
     transition-all duration-300
     dark:border-gray-500
     hover:shadow-2xl hover:translate-x-[-3px] hover:translate-y-[-3px]">
