@@ -90,3 +90,7 @@ export interface UseChartReturn {
 <Example>
   <chart-useChart-3 />
 </Example>
+
+hooks内部并不是在组件挂载时初始化图表，而是在给定图表容器元素存在后触发初始化。
+
+因此，当hooks调用时即便DOM元素不存在，仍然能够正确初始化图表。
