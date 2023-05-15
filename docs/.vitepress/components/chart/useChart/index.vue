@@ -12,7 +12,8 @@
         <el-button type="primary" @click="addSeries">随机加一个序列</el-button>
       </el-form-item>
       <el-form-item label="暗黑模式">
-        <el-switch v-model="theme" active-value="dark" :inactive-value="null" />
+        <!-- <el-switch v-model="theme" active-value="dark" :inactive-value="null" /> -->
+        点击右上角切换
       </el-form-item>
     </el-form>
   </div>
