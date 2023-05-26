@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { useLoad } from 'magic-hooks/lib/core'
+import useLoad from 'magic-hooks/lib/useLoad'
 
 const { result, query, loading, load } = useLoad(async() => {
   const params = Object.entries(query).filter(([key, value]) => !!value).map(([key, value]) => `${key}=${value}`).join('&')

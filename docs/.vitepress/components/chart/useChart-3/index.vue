@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { useChart } from 'magic-hooks/lib/chart';
+import useChart from 'magic-hooks/lib/useChart';
 import { ref, computed } from 'vue';
 import * as echarts from 'echarts'
 import { useData } from 'vitepress';
