@@ -28,10 +28,11 @@
     "gen-icons": "node docs/.vitepress/build/gen-icons.js"
   },
   "dependencies": {
+    "@vueuse/core": "^10.2.0",
     "echarts": "^5.4.2",
     "element-plus": "^2.2.32",
     "lodash": "^4.17.21",
-    "medium-zoom": "^1.0.8",
-    "magic-hooks": "latest"
+    "magic-hooks": "latest",
+    "medium-zoom": "^1.0.8"
   }
 }
