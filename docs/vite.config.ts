@@ -16,4 +16,10 @@ export default defineConfig({
       symbolId: 'svg-icon/[name]',
     }),
   ],
+  ssr: {
+    noExternal: [
+      'lodash',
+      'magic-hooks',
+    ]
+  }
 })
