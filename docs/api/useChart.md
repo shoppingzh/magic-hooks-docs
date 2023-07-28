@@ -1,7 +1,7 @@
 # useChart
 
 <Example title="useChart">
-  <chart-useChart />
+  <useChart />
 </Example>
 
 ## 🚀 特性
@@ -15,7 +15,7 @@
 ## 使用方法
 
 <Example>
-  <chart-useChart-2 />
+  <useChart-2 />
 </Example>
 
 ```vue
@@ -88,7 +88,7 @@ export interface UseChartReturn {
 ### 延迟的DOM
 
 <Example>
-  <chart-useChart-3 />
+  <useChart-3 />
 </Example>
 
 hooks内部并不是在组件挂载时初始化图表，而是在给定图表容器元素存在后触发初始化。
@@ -98,5 +98,5 @@ hooks内部并不是在组件挂载时初始化图表，而是在给定图表容
 ### 操作图表实例
 
 <Example>
-  <chart-useChart-4 />
+  <useChart-4 />
 </Example>

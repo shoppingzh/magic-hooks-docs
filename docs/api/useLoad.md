@@ -1,7 +1,7 @@
 # useLoad
 
 <Example class="mt-4">
-  <core-useLoad />
+  <useLoad />
 </Example>
 
 ## 🚀 特性
