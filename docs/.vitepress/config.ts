@@ -24,11 +24,8 @@ export default defineConfig({
       text: '🎯 快速入手',
       link: '/start.md'
     }, {
-      text: '✈️ 核心模块',
-      link: getFirstDocLink('core')
-    }, {
-      text: '📊 图表模块',
-      link: getFirstDocLink('chart')
+      text: '✈️ API',
+      link: getFirstDocLink('api')
     }],
     sidebar: autoGenerateSidebar() as any,
   }

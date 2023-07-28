@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 import useLoad from 'magic-hooks/lib/useLoad'
+import { onMounted } from 'vue'
 
 const { result, query, loading, load } = useLoad(async() => {
   const params = Object.entries(query).filter(([key, value]) => !!value).map(([key, value]) => `${key}=${value}`).join('&')
@@ -32,6 +33,6 @@ const { result, query, loading, load } = useLoad(async() => {
   initialResult: [],
 })
 
-load()
+onMounted(load)
 
 </script>

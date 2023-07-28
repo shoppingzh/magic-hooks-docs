@@ -21,7 +21,7 @@ npm i magic-hooks
 ## 使用
 
 ```ts
-import { useLoad } from 'magic-hooks/lib/core'
+import useLoad from 'magic-hooks/lib/useLoad'
 
 const { result, load } = useLoad(() => Promise.resolve([1, 2, 3]))
 
