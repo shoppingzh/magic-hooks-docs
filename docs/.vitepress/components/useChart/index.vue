@@ -63,6 +63,7 @@ const {
 } = useChart({
   option,
   theme,
+  lazyRender: true,
 })
 
 function addSeries() {

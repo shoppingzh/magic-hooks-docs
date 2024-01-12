@@ -32,6 +32,7 @@ const option = computed<echarts.EChartsOption>(() => ({
 }))
 const { el } = useChart({
   option,
+  lazyRender: true,
   theme: computed(() => isDark.value ? 'dark' : null)
 })
 </script>
