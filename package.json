@@ -32,7 +32,7 @@
     "echarts": "^5.4.2",
     "element-plus": "^2.3.6",
     "lodash": "^4.17.21",
-    "magic-hooks": "^0.0.3",
+    "magic-hooks": "latest",
     "medium-zoom": "^1.0.8"
   }
 }
