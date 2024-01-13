@@ -9,10 +9,10 @@
       </el-form-item>
     </el-form>
   </div>
-  <el-table v-loading="loading" :data="result" max-height="500px">
-    <el-table-column prop="userId" label="用户ID" align="center" width="100px"></el-table-column>
-    <el-table-column prop="title" label="标题"></el-table-column>
-    <el-table-column prop="body" label="内容"></el-table-column>
+  <el-table v-loading="loading" :data="result" max-height="500">
+    <el-table-column prop="userId" label="用户ID" align="center" min-width="60"></el-table-column>
+    <el-table-column prop="title" label="标题" show-overflow-tooltip min-width="120"></el-table-column>
+    <el-table-column prop="body" label="内容" show-overflow-tooltip min-width="200"></el-table-column>
   </el-table>
   <div class="mt-4 text-gray-500 text-xs text-right">总数：{{ result.length }}</div>
 </template>

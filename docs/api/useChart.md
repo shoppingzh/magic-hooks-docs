@@ -65,7 +65,7 @@ const { el } = useChart({
 
 (UseChartReturn)
 
-## Type Declarations
+**types**
 
 ```ts
 export interface UseChartOptions {
@@ -84,9 +84,8 @@ export interface UseChartReturn {
 
 ```
 
-## 经典场景复现
 
-### 延迟的DOM
+## 延迟的DOM
 
 <Example>
   <useChart-3 />
@@ -96,13 +95,13 @@ hooks内部并不是在组件挂载时初始化图表，而是在给定图表容
 
 因此，当hooks调用时即便DOM元素不存在，仍然能够正确初始化图表。
 
-### 操作图表实例
+## 操作图表实例
 
 <Example>
   <useChart-4 />
 </Example>
 
-### 懒渲染
+## 懒渲染
 
 <Example>
   <useChart-5 />

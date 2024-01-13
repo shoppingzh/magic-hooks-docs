@@ -1,7 +1,9 @@
 # useLoad
 
 <Example class="mt-4">
-  <useLoad />
+  <ClentOnly>
+    <useLoad />
+  </ClentOnly>
 </Example>
 
 ## 🚀 特性
@@ -13,8 +15,11 @@
 
 ```ts
 const { result, query, loading, load } = useLoad(async() => {
-  const params = Object.entries(query).filter(([key, value]) => !!value).map(([key, value]) => `${key}=${value}`).join('&')
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?${params}`)
+  const params = Object.entries(query)
+    .filter(([key, value]) => !!value)
+    .map(([key, value]) => `${key}=${value}`).join('&')
+  const url = `https://jsonplaceholder.typicode.com/posts?${params}`
+  const res = await fetch(url)
   const data: any[] = await res.json()
   return data
 }, {
@@ -38,7 +43,7 @@ load()
 
 (UseLoadReturn)
 
-## Type Declarations
+**types**
 
 ```ts
 type LoadFn<Q, R> = (query: Q) => Promise<R>

@@ -31,7 +31,7 @@ const option = computed<echarts.EChartsOption>(() => ({
     data: data.map(o => ({
       value: o.count,
       itemStyle: {
-        color: o.province === active.value ? 'green' : undefined
+        color: o.province === active.value ? 'orange' : undefined
       }
     })),
   }
