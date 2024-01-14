@@ -10,6 +10,7 @@
           size="small">{{ item.label }}</ElRadioButton>
       </ElRadioGroup>
     </div>
+    <ElDivider direction="vertical" />
     <div class="ml-2 select-none">
       <ElLink :underline="false" @click="add">添加</ElLink>
       <ElLink :underline="false" class="ml-2" @click="disable">禁用</ElLink>
@@ -19,7 +20,9 @@
     </div>
   </div>
 
-  <div class="mt-4 p-2 bg-gray-50 dark:bg-gray-800 rounded-md">
+
+
+  <div class="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-md">
     <component v-if="activeItem" :key="activeValue" :is="activeItem.component" />
     <div v-else class="py-4 text-center text-sm text-gray-700">空空如也</div>
   </div>
