@@ -64,5 +64,5 @@ interface UseSelectReturn {
 ## 普通选择
 
 <Example>
-  <useSelect-demo1 />
+  <useSelect-demo2 />
 </Example>
