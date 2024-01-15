@@ -28,5 +28,11 @@ export default defineConfig({
       link: getFirstDocLink('api')
     }],
     sidebar: autoGenerateSidebar() as any,
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/shoppingzh/magic-hooks',
+      }
+    ]
   }
 })
