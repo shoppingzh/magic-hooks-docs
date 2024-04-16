@@ -19,9 +19,11 @@
 
 <script setup lang="ts">
 import useLoad from 'magic-hooks/lib/useLoad'
-import { onMounted } from 'vue'
+import { ref, onMounted, readonly } from 'vue'
 
-const { result, query, loading, load } = useLoad(async() => {
+// const all = ref([])
+const loading = ref(false)
+const { query, result, load } = useLoad(async() => {
   const params = Object.entries(query).filter(([key, value]) => !!value).map(([key, value]) => `${key}=${value}`).join('&')
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts?${params}`)
   const data: any[] = await res.json()
@@ -31,6 +33,7 @@ const { result, query, loading, load } = useLoad(async() => {
     userId: null,
   },
   initialResult: [],
+  loading,
 })
 
 onMounted(load)
