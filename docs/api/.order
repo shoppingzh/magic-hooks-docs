@@ -3,7 +3,6 @@ useSelect
 
 $加载$
 useLoad
-useLoadList
 
 $图表$
 useChart
