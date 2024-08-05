@@ -36,9 +36,9 @@ import { random } from 'lodash'
 
 const { activeValue, activeItem, items } = useSelect({
   items: [
-    { value: 1, label: '页面1', component: 'useChart' },
-    { value: 2, label: '页面2', component: 'useChart-2' },
-    { value: 3, label: '页面3', component: 'useChart-5' },
+    { value: 1, label: '页面1', disabled: false, component: 'useChart' },
+    { value: 2, label: '页面2', disabled: false, component: 'useChart-2' },
+    { value: 3, label: '页面3', disabled: false, component: 'useChart-5' },
   ],
   autoSelect: true,
 })
@@ -48,6 +48,7 @@ function add() {
   items.value.push({
     value,
     label: `页面${value}`,
+    disabled: false,
     component: 'useChart',
   })
 }

@@ -27,8 +27,7 @@
 **types**
 
 ```ts
-
-export type SelectItemValue = string | number | boolean
+export type SelectItemValue = string | number
 
 interface BaseSelectItem {
   /** ID */
@@ -42,22 +41,22 @@ export interface SelectItem extends BaseSelectItem {
   [key: string]: any
 }
 
-interface UseSelectOptions {
+interface UseSelectOptions<T extends BaseSelectItem> {
   /** 选项列表 */
-  items: MaybeRef<SelectItem[]>
+  items: MaybeRef<T[]>
   /** 默认值 */
   initialValue?: MaybeRef<SelectItemValue>
   /** 当没有值选中时，是否自动选中 */
-  autoSelect?: boolean
+  autoSelect?: MaybeRef<boolean>
 }
 
-interface UseSelectReturn {
+interface UseSelectReturn<T extends BaseSelectItem> {
   /** 选项列表 */
-  items: Ref<SelectItem[]>
+  items: Ref<T[]>
   /** 选中值 */
   activeValue: Ref<SelectItemValue>
   /** 选中项 */
-  activeItem: ComputedRef<SelectItem>
+  activeItem: ComputedRef<T>
 }
 ```
 
@@ -65,4 +64,12 @@ interface UseSelectReturn {
 
 <Example>
   <useSelect-demo2 />
+</Example>
+
+## 延迟的自动选择
+
+`autoSelect` 参数可以传递一个响应式变量，这样就可以实现自动选择状态在未来变为 `true` 时，也可以自动选择第一个可用项。
+
+<Example>
+  <useSelect-demo3 />
 </Example>
